@@ -11,4 +11,11 @@ func main() {
 	for _, arg := range args {
 		fmt.Println(arg)
 	}
+
+	host, err := os.Hostname()
+	if err == nil {
+		fmt.Println(host)
+	} else {
+		fmt.Println(err.Error())
+	}
 }
